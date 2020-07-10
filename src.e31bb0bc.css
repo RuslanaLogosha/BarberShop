@@ -570,11 +570,6 @@ img {
   min-height: 440px;
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
-@media screen and (max-width: 480px) {
-  .price-list {
-    overflow: hidden;
-  }
-}
 @media screen and (min-width: 1280px) {
   .price-list {
     display: flex;
