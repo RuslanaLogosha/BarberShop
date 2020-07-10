@@ -1,24 +1,46 @@
 <header>
+  <div class="container header">
   <!-- logo -->
+  <div class="logo"></div>
 
-  <nav>
+  <div class="mobile-menu" id="mobile-menu" data-menu>
+    <div class="content">
+    <nav>
+      <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Услуги и цены</a></li>
+        <li><a href="#">Мастера</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+  
+    <a href="tel:+380441111111">+38 044 111 11 11</a>
+  
+    <button>онлайн-запись</button>
+  
     <ul>
-      <li><a href="#">О нас</a></li>
-      <li><a href="#">Услуги и цены</a></li>
-      <li><a href="#">Мастера</a></li>
-      <li><a href="#">Контакты</a></li>
+      <li><a lang="en" href="#">Instagram</a></li>
+      <li><a lang="en" href="#">Youtube</a></li>
     </ul>
-  </nav>
-
-  <a href="tel:+380441111111">+38 044 111 11 11</a>
-
-  <button>онлайн-запись</button>
-
-  <ul>
-    <li><a lang="en" href="#">Instagram</a></li>
-    <li><a lang="en" href="#">Youtube</a></li>
-  </ul>
+  </div>
+  </div>
+  
+  <button type="button" class="mobile-button" data-menu-button>
+    <svg class="mobile-button-icon" 
+    width="40" 
+    height="40"
+    aria-label="Переключатель мобильного меню"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+    >
+      <use class="mobile-button-icon-menu" href="./images/sprite.svg#icon-menu"></use> 
+      <use class="mobile-button-icon-close" href="./images/sprite.svg#icon-close"></use>
+    </svg>
+  </button>
+</div>
 </header>
+
+
 
 <section>
   <h1 lang="en">A hair salon for men in Kyiv</h1>
