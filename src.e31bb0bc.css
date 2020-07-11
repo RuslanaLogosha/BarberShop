@@ -364,14 +364,36 @@ button {
 }
 
 .container-for-header {
+  position: relative;
   min-height: 580px;
   background-color: rgba(25, 28, 38, 0.2);
 }
+@media screen and (min-width: 768px) {
+  .container-for-header {
+    min-height: 680px;
+  }
+}
+.container-for-header svg {
+  display: block;
+  fill: currentColor;
+}
 
 .logo-barbershop {
+  position: relative;
   display: inline-block;
   width: 69px;
   height: 56px;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .logo-barbershop {
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo-barbershop {
+    left: 11px;
+  }
 }
 
 .title-greatest {
@@ -385,6 +407,7 @@ button {
 }
 
 .page-social {
+  display: flex;
   position: relative;
   padding-left: 60px;
 }
@@ -422,10 +445,8 @@ button {
   color: #ffffff;
 }
 .menu-mobile-toggle > svg {
-  display: block;
   width: inherit;
   height: inherit;
-  fill: currentColor;
 }
 .menu-mobile-toggle .icon-close {
   display: none;
@@ -467,6 +488,14 @@ button {
   .menu-mobile-container [class$=-item]:last-child {
     margin-bottom: 0;
   }
+  .menu-mobile-container .page-social {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-mobile-container {
+    display: flex;
+  }
 }
 
 .page-header {
@@ -477,13 +506,54 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.page-header-tel {
-  margin-bottom: 24px;
+.page-header-contacts {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .page-header-contacts {
+    min-height: 89px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header-contacts {
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: 76px;
+    margin-left: 47px;
+  }
 }
 .page-header-button {
-  padding-left: 37px;
-  padding-right: 37px;
   background-color: transparent;
+}
+@media screen and (max-width: 767px) {
+  .page-header-button {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header-social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-origin: top left;
+    transform: translateY(100%) rotate(-90deg);
+    width: 680px;
+    height: calc(159px + (100vw - 768px) / 2);
+    background-color: #ffffffba;
+    padding-left: 40px;
+  }
+  .page-header-social .page-social {
+    position: absolute;
+    top: calc(80px + (100vw - 768px) / 2);
+    transform: translateY(-50%);
+  }
+  .page-header-social .page-social-link {
+    font-size: 11px;
+    line-height: 1.36;
+  }
 }
 
 .site-nav {
@@ -494,6 +564,9 @@ button {
     flex-direction: column;
   }
 }
+.site-nav-item {
+  margin-left: 24px;
+}
 .site-nav-link, .page-header-tel {
   display: block;
   font-family: "Open Sans", sans-serif;
@@ -503,6 +576,13 @@ button {
   letter-spacing: 0.1em;
   text-decoration: none;
   color: #303030;
+}
+@media screen and (min-width: 768px) {
+  .site-nav-link, .page-header-tel {
+    font-size: 12px;
+    line-height: 1.33;
+    color: #ffffff;
+  }
 }
 
 /*-*/
@@ -1356,8 +1436,8 @@ body.modal-open {
 }
 @media screen and (max-width: 767px) {
   .modal {
-    width: 450px;
-    height: 500px;
+    width: 360px;
+    height: 470px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -1414,15 +1494,6 @@ body.modal-open {
   color: rgba(157, 164, 189, 0.4);
 }
 
-.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label {
-  transform: translate(0px, -40px);
-  color: #ff6c00;
-}
-
-.form-input:focus {
-  border-color: #ff6c00;
-}
-
 .form-textarea {
   position: relative;
   resize: none;
@@ -1436,7 +1507,7 @@ body.modal-open {
 }
 @media screen and (max-width: 767px) {
   .form-textarea {
-    width: 370px;
+    width: 280px;
   }
 }
 
@@ -1481,8 +1552,17 @@ body.modal-open {
 }
 @media screen and (max-width: 767px) {
   .form-input {
-    width: 370px;
+    width: 280px;
   }
+}
+
+.form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(0px, -40px);
+  color: #ff6c00;
+}
+
+.form-input:focus {
+  border-color: #ff6c00;
 }
 
 .submit-button {
