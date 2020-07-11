@@ -302,7 +302,7 @@ button {
 }
 
 .submit-button, .button, .page-header-button {
-  padding: 12px 20px;
+  padding: 12px 19px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
   font-family: "Open Sans", sans-serif;
@@ -354,13 +354,31 @@ button {
   }
 }
 
+.page-social-link:hover,
 .site-nav-link:hover,
 .page-header-tel:hover,
-.page-social-link:hover,
+.page-social-link:focus,
 .site-nav-link:focus,
-.page-header-tel:focus,
-.page-social-link:focus {
+.page-header-tel:focus {
   color: #ff6c00;
+}
+
+.site-nav-link, .page-header-tel {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  color: #303030;
+}
+@media screen and (min-width: 768px) {
+  .site-nav-link, .page-header-tel {
+    font-size: 12px;
+    line-height: 1.34;
+    color: #ffffff;
+  }
 }
 
 .container-for-header {
@@ -393,6 +411,12 @@ button {
 @media screen and (min-width: 768px) {
   .logo-barbershop {
     left: 11px;
+    top: -8px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo-barbershop {
+    left: 0px;
   }
 }
 
@@ -417,6 +441,11 @@ button {
   top: 0;
   margin: 9px 0;
 }
+@media screen and (min-width: 768px) {
+  .page-social::before {
+    margin: 7px 0;
+  }
+}
 .page-social-item {
   margin-left: 40px;
 }
@@ -424,7 +453,7 @@ button {
   display: block;
   font-weight: 600;
   font-size: 14px;
-  line-height: 1.36;
+  line-height: 1.37;
   letter-spacing: 0.2em;
   text-decoration: none;
   color: #303030;
@@ -463,6 +492,10 @@ button {
   }
 }
 
+.menu-mobile-toggle.is-open .backdrop svg {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .menu-mobile-container {
     display: none;
@@ -497,6 +530,13 @@ button {
     display: flex;
   }
 }
+@media screen and (min-width: 1280px) {
+  .menu-mobile-container {
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-left: 32px;
+  }
+}
 
 .page-header {
   padding-top: 40px;
@@ -504,7 +544,11 @@ button {
 .page-header-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .page-header-row {
+    align-items: center;
+  }
 }
 .page-header-contacts {
   display: inline-flex;
@@ -524,6 +568,13 @@ button {
     margin-left: 47px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .page-header-contacts {
+    flex-direction: row;
+    margin: 0;
+    min-height: initial;
+  }
+}
 .page-header-button {
   background-color: transparent;
 }
@@ -531,6 +582,16 @@ button {
   .page-header-button {
     padding-left: 36px;
     padding-right: 36px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header-button {
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .page-header-button {
+    margin-left: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -547,12 +608,21 @@ button {
   }
   .page-header-social .page-social {
     position: absolute;
-    top: calc(80px + (100vw - 768px) / 2);
+    top: calc(83px + (100vw - 768px) / 2);
     transform: translateY(-50%);
   }
   .page-header-social .page-social-link {
     font-size: 11px;
-    line-height: 1.36;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .page-header-social {
+    height: calc(155px + (100vw - 1280px) / 2);
+  }
+  .page-header-social .page-social {
+    position: absolute;
+    top: calc(80px + (100vw - 1280px) / 2);
+    transform: translateY(0);
   }
 }
 
@@ -564,24 +634,20 @@ button {
     flex-direction: column;
   }
 }
-.site-nav-item {
-  margin-left: 24px;
+@media screen and (min-width: 768px) {
+  .site-nav-item {
+    margin-left: 24px;
+  }
 }
-.site-nav-link, .page-header-tel {
-  display: block;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.4;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  color: #303030;
+@media screen and (min-width: 1280px) {
+  .site-nav-item {
+    margin-left: 40px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .site-nav-link, .page-header-tel {
-    font-size: 12px;
-    line-height: 1.33;
-    color: #ffffff;
+  .site-nav-link {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
