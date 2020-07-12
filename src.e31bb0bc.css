@@ -1500,26 +1500,17 @@ p {
   width: 100%;
   background-color: #191c26;
 }
-@media screen and (max-width: 768px) {
-  .footer-online-rec {
-    padding-left: 31px;
-    padding-right: 31px;
-  }
-}
 @media screen and (min-width: 768px) {
   .footer-online-rec {
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 39px;
-    padding-right: 39px;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer-online-rec {
     padding-top: 130px;
     padding-bottom: 130px;
-    padding-left: 55px;
-    padding-right: 25px;
+    padding-right: 40px;
   }
 }
 
@@ -1568,7 +1559,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .footer-form-input {
-    width: 265px;
+    width: 260px;
   }
 }
 .footer-form-input:hover {
