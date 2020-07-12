@@ -1104,9 +1104,16 @@ button {
     margin-bottom: 30px;
   }
   .team-svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
     fill: #303030;
+    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    background-color: #303030;
     fill: #ff6c00;
   }
   .team-heading {
@@ -1140,15 +1147,6 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 64px;
-  }
-  .team-link {
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 0;
-  }
-  .team-link:hover, .team-link:focus {
-    background-color: #303030;
   }
   .team-link + .team-link {
     margin-left: 10px;
@@ -1196,9 +1194,14 @@ button {
     margin-bottom: 30px;
   }
   .team-svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
     fill: #303030;
   }
   .team-svg:hover, .team-svg:focus {
+    background-color: #303030;
     fill: #ff6c00;
   }
   .team-heading {
@@ -1234,21 +1237,12 @@ button {
             justify-content: center;
     margin-bottom: 64px;
   }
-  .team-link {
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 0;
-  }
-  .team-link:hover, .team-link:focus {
-    background-color: #303030;
-  }
   .team-link + .team-link {
     margin-left: 10px;
   }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1600px) {
+@media screen and (min-width: 1280px) {
   .team {
     background-color: #f7f7f7;
     width: 100%;
@@ -1291,9 +1285,19 @@ button {
     margin-left: 30px;
   }
   .team-svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
     fill: #303030;
+    -webkit-transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     fill: #ff6c00;
   }
   .team-heading {
@@ -1326,15 +1330,6 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .team-link {
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 0;
-  }
-  .team-link:hover, .team-link:focus {
-    background-color: #303030;
   }
   .team-link + .team-link {
     margin-left: 10px;
