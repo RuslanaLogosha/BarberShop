@@ -1497,14 +1497,10 @@ p {
 .footer-online-rec {
   padding-top: 84px;
   padding-bottom: 84px;
+  padding-left: 31px;
+  padding-right: 31px;
   width: 100%;
   background-color: #191c26;
-}
-@media screen and (max-width: 768px) {
-  .footer-online-rec {
-    padding-left: 31px;
-    padding-right: 31px;
-  }
 }
 @media screen and (min-width: 768px) {
   .footer-online-rec {
