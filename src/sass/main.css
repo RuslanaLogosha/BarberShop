@@ -1109,11 +1109,36 @@ button {
     padding: 0;
     line-height: 0;
     fill: #303030;
-    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 500ms, fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-animation: pulsing 2s infinite;
+            animation: pulsing 2s infinite;
+  }
+  @-webkit-keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+  }
+  @keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
   }
   .team-svg:hover, .team-svg:focus {
-    background-color: #303030;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     fill: #ff6c00;
   }
   .team-heading {
@@ -1199,9 +1224,36 @@ button {
     padding: 0;
     line-height: 0;
     fill: #303030;
+    -webkit-transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-animation: pulsing 2s infinite;
+            animation: pulsing 2s infinite;
+  }
+  @-webkit-keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.2, 0.2);
+              transform: scale(0.2, 0.2);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+  }
+  @keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.2, 0.2);
+              transform: scale(0.2, 0.2);
+    }
+    50% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
   }
   .team-svg:hover, .team-svg:focus {
-    background-color: #303030;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
     fill: #ff6c00;
   }
   .team-heading {
