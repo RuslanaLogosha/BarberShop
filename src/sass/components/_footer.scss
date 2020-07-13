@@ -27,11 +27,23 @@
   @media screen and (min-width: 1280px) {
     padding-top: 130px;
     padding-bottom: 130px;
-    padding-right: 40px;
+    // padding-right: 40px;
     // padding-left: 55px;
     // padding-right: 25px;
   }
 }
+
+.footer-flex-container .container {
+  @media screen and (min-width: 1280px) {
+    padding-right: 40px;
+  }  
+
+  @media screen and (max-width: 1280) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+  
 @media screen and (min-width: 768px) {
   .footer-form-list {
     display: flex;
@@ -144,6 +156,7 @@
   background-image: url(../images/contacts-bg-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
