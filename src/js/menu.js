@@ -6,7 +6,7 @@
     const expanded =
       menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
-    document.body.classList.toggle('modal-open');
+    document.body.classList.toggle('menu-is-open');
     menuBtnRef.classList.toggle('is-open');
     menuBtnRef.setAttribute('aria-expanded', !expanded);
 
@@ -16,7 +16,7 @@
   let links = document.querySelectorAll('[data-site-nav]');
   for (let link of links) {
     link.addEventListener('click', () => {
-      document.body.classList.remove('modal-open');
+      document.body.classList.remove('menu-is-open');
       mobileMenuRef.classList.remove('is-open');
       menuBtnRef.classList.remove('is-open');
     });
