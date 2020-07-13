@@ -119,7 +119,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/btn-upp.js":[function(require,module,exports) {
 //Get the button
-var mybutton = document.getElementById('myBtn'); // When the user scrolls down 20px from the top of the document, show the button
+var mybutton = document.querySelector('[button-top]');
+mybutton.addEventListener('click', topFunction); // When the user scrolls down 20px from the top of the document, show the button
 
 window.onscroll = function () {
   scrollFunction();
@@ -166,7 +167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51743" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53669" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

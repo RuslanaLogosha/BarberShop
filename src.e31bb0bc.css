@@ -2141,6 +2141,7 @@ body.modal-open {
   top: 8px;
   right: 8px;
   padding: 0px;
+  padding-top: 2px;
   width: 30px;
   height: 30px;
   border: none;
