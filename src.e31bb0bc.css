@@ -708,12 +708,39 @@ p {
   color: #9da4bd;
 }
 
+.slide-marks {
+  text-align: center;
+  position: absolute;
+  right: 39px;
+  top: 50%;
+}
+
+.mySlides {
+  height: inherit;
+}
+
 .slider {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .slider {
+    height: 580px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slider {
+    height: 680px;
+  }
 }
 .slider-slide {
-  display: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .slider-slide.current {
   display: block;
@@ -722,6 +749,69 @@ p {
   display: none;
 }
 
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding: 0 0 8px 10px;
+  margin-bottom: 40px;
+  margin-right: 39px;
+  color: #ffffff;
+  transition: 0.6s ease;
+  user-select: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  /* identical to box height */
+  text-align: right;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid currentColor;
+}
+.prev:hover,
+.next:hover {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.next {
+  right: 125px;
+  padding: 0 12px 8px 0;
+}
+
+.line {
+  cursor: pointer;
+  display: block;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* right: 0; */
+  /* border-bottom: 2px solid #ffff; */
+  width: 8px;
+  height: 2px;
+  margin: 12px 0 12px auto;
+  transform: scaleX(1);
+  /* margin-right: 35px; */
+  /* display: inline-block; */
+  background-color: #9da4bd;
+  transform-origin: center right;
+  transition: background-color 0.6s ease, transform 0.6s ease;
+  z-index: 5;
+}
+
+.line.active {
+  background-color: #ffffff;
+  transform: scaleX(2.25);
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+.next,
+.text {
+    font-size: 11px;
+  }
+}
 .section {
   font-family: "Open Sans", sans-serif;
 }
@@ -1216,9 +1306,32 @@ p {
     margin-bottom: 30px;
   }
   .team-svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
     fill: #303030;
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulsing 2s infinite;
+  }
+  @-webkit-keyframes pulsing {
+    0% {
+      transform: scale(0.5, 0.5);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes pulsing {
+    0% {
+      transform: scale(0.5, 0.5);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
   }
   .team-svg:hover, .team-svg:focus {
+    transform: rotate(360deg);
     fill: #ff6c00;
   }
   .team-heading {
@@ -1248,15 +1361,6 @@ p {
     display: flex;
     justify-content: center;
     padding-bottom: 64px;
-  }
-  .team-link {
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 0;
-  }
-  .team-link:hover, .team-link:focus {
-    background-color: #303030;
   }
   .team-link + .team-link {
     margin-left: 10px;
@@ -1299,9 +1403,32 @@ p {
     margin-bottom: 30px;
   }
   .team-svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
     fill: #303030;
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulsing 2s infinite;
+  }
+  @-webkit-keyframes pulsing {
+    0% {
+      transform: scale(0.2, 0.2);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes pulsing {
+    0% {
+      transform: scale(0.2, 0.2);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
   }
   .team-svg:hover, .team-svg:focus {
+    transform: rotate(360deg);
     fill: #ff6c00;
   }
   .team-heading {
@@ -1332,15 +1459,6 @@ p {
     display: flex;
     justify-content: center;
     margin-bottom: 64px;
-  }
-  .team-link {
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 0;
-  }
-  .team-link:hover, .team-link:focus {
-    background-color: #303030;
   }
   .team-link + .team-link {
     margin-left: 10px;
@@ -1385,9 +1503,15 @@ p {
     margin-left: 30px;
   }
   .team-svg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 0;
     fill: #303030;
+    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    transform: rotate(360deg);
     fill: #ff6c00;
   }
   .team-heading {
@@ -1416,15 +1540,6 @@ p {
   .team-social {
     display: flex;
     justify-content: center;
-  }
-  .team-link {
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 0;
-    line-height: 0;
-  }
-  .team-link:hover, .team-link:focus {
-    background-color: #303030;
   }
   .team-link + .team-link {
     margin-left: 10px;
