@@ -10,6 +10,7 @@
   background-position: center center;
   width: 100%;
   height: auto;
+  scroll-snap-align: center;
 
   @media screen and (min-width: 768px) {
     padding-top: 100px;
