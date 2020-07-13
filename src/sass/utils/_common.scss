@@ -1,5 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body  {
   font-family: $font-main-text, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 img {
@@ -7,7 +16,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 button {
   cursor: pointer;
