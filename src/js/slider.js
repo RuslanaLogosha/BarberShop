@@ -1,8 +1,25 @@
+// action for '[data-slider-line]'
+let lines = document.querySelectorAll('[data-slider-line]');
+lines.forEach((line, index) =>
+  line.addEventListener('click', () => {
+    // console.log(index + 1);
+    currentSlide(index + 1);
+  }),
+);
 
 let slideIndex = 1;
+//action for '[data-slider-prev]'
+const sliderBtnPrev = document.querySelector('[data-slider-prev]');
+sliderBtnPrev.addEventListener('click', () => plusSlides(-1));
+//action for '[data-slider-next]'
+const sliderBtnNext = document.querySelector('[data-slider-next]');
+sliderBtnNext.addEventListener('click', () => plusSlides(1));
+//
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
+  console.log(n);
   showSlides((slideIndex += n));
 }
 

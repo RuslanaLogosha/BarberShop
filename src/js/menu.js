@@ -1,5 +1,4 @@
 (() => {
-  //
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
 
@@ -14,7 +13,6 @@
     mobileMenuRef.classList.toggle('is-open');
   });
 
-  //
   let links = document.querySelectorAll('[data-site-nav]');
   for (let link of links) {
     link.addEventListener('click', () => {
