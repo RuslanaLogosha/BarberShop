@@ -17,7 +17,7 @@ Header: Denys Onyshchuk
 About-us: Daria Churkina https://www.linkedin.com/in/daria-churkina-823a4b108/
 Services-and-prices: Olga Levshukova https://www.linkedin.com/in/olga-levshukova-62831343/
 Advantagess: Daryna Shevchuk https://www.linkedin.com/in/daryna-shevchuk-19101993/
-Team: Dmytro Kukharchuk 
+Team: Dmytro Kukharchuk https://www.linkedin.com/in/дмитрий-кухарчук-4979a51b2/
 Portfolio: Oleksandr Sybirko https://www.linkedin.com/in/александр-сибирко-00038819a
 Footer: Kostiantyn Harbuz
 
