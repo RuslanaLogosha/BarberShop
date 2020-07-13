@@ -1,4 +1,5 @@
 (() => {
+  //
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
 
@@ -6,9 +7,20 @@
     const expanded =
       menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
+    document.body.classList.toggle('modal-open');
     menuBtnRef.classList.toggle('is-open');
     menuBtnRef.setAttribute('aria-expanded', !expanded);
 
     mobileMenuRef.classList.toggle('is-open');
   });
+
+  //
+  let links = document.querySelectorAll('[data-site-nav]');
+  for (let link of links) {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('modal-open');
+      mobileMenuRef.classList.remove('is-open');
+      menuBtnRef.classList.remove('is-open');
+    });
+  }
 })();

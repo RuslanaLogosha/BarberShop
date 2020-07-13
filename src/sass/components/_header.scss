@@ -164,6 +164,7 @@
 
 .menu-mobile-container {
   z-index: 2;
+  overflow-y: auto;
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
     display: none;
 
