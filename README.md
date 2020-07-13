@@ -1,6 +1,26 @@
-# parcel-project-template
+# BarberShop_group_4
 
-## Developing
+Финальный проект по курсу HTML+CSS группы №4 (Frontend Core #22, GoIT).
+
+## Tech stack 
+
+Для реализации проекта были использованы такие технологии: HTML5 (40.1%), CSS3 (56.7%), JavaScript (3.2%).
+
+### Developers
+
+Team lead: Ruslana Logosha https://www.linkedin.com/in/ruslana-logosha-674b9241/
+Scrum Master: Olga Levshukova https://www.linkedin.com/in/olga-levshukova-62831343/
+
+Макет был разработан: 
+
+Header: Denys Onyshchuk
+About-us: Daria Churkina https://www.linkedin.com/in/daria-churkina-823a4b108/
+Services-and-prices: Olga Levshukova https://www.linkedin.com/in/olga-levshukova-62831343/
+Advantagess: Daryna Shevchuk https://www.linkedin.com/in/daryna-shevchuk-19101993/
+Team: Dmytro Kukharchuk 
+Portfolio: Oleksandr Sybirko https://www.linkedin.com/in/александр-сибирко-00038819a
+Footer: Kostiantyn Harbuz
+
 
 ### Prerequisites
 
