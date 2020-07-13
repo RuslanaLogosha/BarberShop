@@ -1,5 +1,6 @@
 .section {
   font-family: $font-main-text;
+  scroll-snap-align: center;
 }
 
 .container.about-us {
