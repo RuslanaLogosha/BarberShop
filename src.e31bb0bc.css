@@ -1607,6 +1607,7 @@ p {
 @media screen and (min-width: 1280px) {
   .footer-flex-container {
     display: flex;
+    justify-content: space-between;
   }
 }
 .footer-online-rec {
@@ -1625,7 +1626,26 @@ p {
   .footer-online-rec {
     padding-top: 130px;
     padding-bottom: 130px;
+    max-width: 560px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-flex-container .container {
     padding-right: 40px;
+  }
+}
+@media screen and (max-width: 1280) {
+  .footer-flex-container .container {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-flex-container .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 655px;
   }
 }
 
@@ -1790,6 +1810,7 @@ p {
     padding-top: 130px;
     padding-bottom: 130px;
     padding-left: 155px;
+    max-width: 625px;
   }
 }
 
