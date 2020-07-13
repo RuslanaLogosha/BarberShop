@@ -16,12 +16,13 @@
           <use class="icon-close" href="./images/sprite.svg#icon-close"></use>
         </svg>
       </button>
+
       <div
         class="menu-mobile-container"
         id="menu-mobile-container"
         data-menu=""
       >
-        <nav>
+        <nav class="menu-mobile-container-element">
           <ul class="site-nav">
             <li class="site-nav-item">
               <a class="site-nav-link" href="#">О нас</a>
@@ -38,49 +39,111 @@
           </ul>
         </nav>
 
-        <a class="page-header-tel" href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
+        <div class="menu-mobile-container-element page-header-contacts">
+          <a class="page-header-tel" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
 
-        <button
-          class="button"
-          data-open-modal
-          aria-label="Кнопка онлайн-записи"
-        >
-          онлайн-запись
-        </button>
+          <button
+            class="page-header-button"
+            data-open-modal
+            aria-label="Кнопка онлайн-записи"
+          >
+            онлайн-запись
+          </button>
+        </div>
 
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Youtube</a></li>
-        </ul>
+        <div class="page-header-social">
+          <ul class="menu-mobile-container-element page-social">
+            <li class="page-social-item">
+              <a class="page-social-link" href="#">Instagram</a>
+            </li>
+            <li class="page-social-item">
+              <a class="page-social-link" href="#">Youtube</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
-</div>
 
-<div class="container">
-  <section class="greeting">
-    <h2 class="section-title greeting-subtitle">
-      A hair salon for men in Kyiv
-    </h2>
+  <div class="container">
+    <section class="greeting">
+      <h2 class="section-title greeting-subtitle">
+        A hair salon for men in Kyiv
+      </h2>
 
-    <h1 class="title-greatest">BarberShop</h1>
-    <p class="greeting-text">
-      Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
-      вкусом.
-    </p>
+      <h1 class="title-greatest">BarberShop</h1>
+      <p class="greeting-text">
+        Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
+        вкусом.
+      </p>
+    </section>
+  </div>
+
+  <section class="slider">
+    <div class="mySlides">
+      <img
+        class="slider-slide current"
+        src="./images/slider1-desk.jpg"
+        alt="Слайд №1"
+      />
+    </div>
+    <div class="mySlides">
+      <img
+        class="slider-slide current"
+        src="./images/slider2-desk.jpg"
+        alt="Слайд №2"
+      />
+    </div>
+    <div class="mySlides">
+      <img
+        class="slider-slide current"
+        src="./images/slider3-desk.jpg"
+        alt="Слайд №3"
+      />
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">Вперед</a>
+    <a class="next" onclick="plusSlides(1)">Назад</a>
+
+    <div class="slide-marks">
+      <span class="line" onclick="currentSlide(1)"></span>
+      <span class="line" onclick="currentSlide(2)"></span>
+      <span class="line" onclick="currentSlide(3)"></span>
+    </div>
   </section>
-</div>
 
-<section class="slider">
-  <img class="slider-slide" src="./images/slider1-mob.jpg" alt="Слайд №1" />
-  <img
-    class="slider-slide current"
-    src="./images/slider2-mob.jpg"
-    alt="Слайд №2"
-  />
-  <img class="slider-slide" src="./images/slider3-mob.jpg" alt="Слайд №3" />
-  <button class="slider-button">Назад</button>
-  <button class="slider-button">Вперед</button>
-</section>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName('mySlides');
+      let lines = document.getElementsByClassName('line');
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      for (i = 0; i < lines.length; i++) {
+        lines[i].className = lines[i].className.replace(' active', '');
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      lines[slideIndex - 1].className += ' active';
+    }
+  </script>
+</div>
