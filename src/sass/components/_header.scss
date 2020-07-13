@@ -361,6 +361,12 @@
     letter-spacing: 0.02em;
 
     color: $color-text-on-dark;
+
+    @media screen and (min-width: $viewport-breakpoint-3) {
+      width: 470px;
+      font-size: 18px;
+      line-height: 1.67;
+    }
   }
 }
 
