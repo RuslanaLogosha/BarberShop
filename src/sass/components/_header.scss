@@ -170,7 +170,8 @@
   z-index: 2;
 
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
-    display: none;
+    @include transition(transform);
+    transform: translateX(101%);
 
     position: absolute;
     top: 0;
@@ -189,6 +190,7 @@
     &.is-open {
       display: block;
       overflow-y: auto;
+      transform: translateX(0);
     }
 
     &-element:not(:last-child) {
@@ -377,6 +379,7 @@
   }
 }
 
+//slider
 .slide-marks {
   text-align: center;
   position: absolute;
@@ -471,15 +474,16 @@
   background-color: $color-pale;
   transform: scaleX(2.25);
 }
-
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
+  // On smaller screens, decrease text size
   .prev,
   .next,
   .text {
     font-size: 11px;
   }
 }
+
+//btn-up
 #myBtn {
   @include transition(color);
   display: none;
