@@ -44,9 +44,9 @@ p {
     padding-right: 31px;
   }
 
-  @media screen and (min-width: $viewport-breakpoint-1) {
-    width: 480px;
-  }
+  // @media screen and (min-width: $viewport-breakpoint-1) {
+  //   width: 480px;
+  // }
 
   @media screen and (min-width: $viewport-breakpoint-2) {
     width: 768px;

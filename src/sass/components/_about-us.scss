@@ -1,12 +1,11 @@
 .section {
+  @extend %section;
   font-family: $font-main-text;
   scroll-snap-align: center;
 }
 
 .container.about-us {
   display: block;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .section-title {
