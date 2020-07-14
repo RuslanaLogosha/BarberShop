@@ -306,11 +306,6 @@ p {
     padding-right: 31px;
   }
 }
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -342,6 +337,25 @@ p {
   color: #ffffff;
   background-color: #ff6c00;
 }
+@media screen and (max-width: 767px) {
+  .container-portfolio, .advantages, .prices, .section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-portfolio, .advantages, .prices, .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container-portfolio, .advantages, .prices, .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
 .advantages-subtitle, .prices .section-title, .section-title, .page-social::before {
   display: inline-flex;
   align-items: center;
@@ -912,8 +926,6 @@ p {
 
 .container.about-us {
   display: block;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .section-title-secondary {
@@ -1042,8 +1054,6 @@ p {
 .prices {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 84px;
-  padding-bottom: 84px;
   background-color: #111319;
   background-image: url(/prices-overlay-mob.b77fcf46.png);
   background-size: cover;
@@ -1052,18 +1062,6 @@ p {
   width: 100%;
   height: auto;
   scroll-snap-align: center;
-}
-@media screen and (min-width: 768px) {
-  .prices {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .prices {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -1236,8 +1234,6 @@ p {
 }
 
 .advantages {
-  padding-top: 84px;
-  padding-bottom: 84px;
   font-family: "Open Sans", sans-serif;
 }
 .advantages-thumb {
@@ -1291,16 +1287,12 @@ p {
 }
 @media screen and (min-width: 768px) {
   .advantages {
-    padding-top: 100px;
-    padding-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1280px) {
   .advantages {
-    padding-top: 130px;
-    padding-bottom: 130px;
     padding-right: 70px;
     padding-left: 100px;
     display: flex;
@@ -1618,23 +1610,6 @@ p {
 }
 .team {
   scroll-snap-align: center;
-}
-
-.container-portfolio {
-  padding-top: 84px;
-  padding-bottom: 84px;
-}
-@media screen and (min-width: 768px) {
-  .container-portfolio {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .container-portfolio {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
 }
 
 .list-portfolio {
