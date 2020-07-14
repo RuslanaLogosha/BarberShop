@@ -19,7 +19,7 @@ Services-and-prices: Olga Levshukova https://www.linkedin.com/in/olga-levshukova
 Advantagess: Daryna Shevchuk https://www.linkedin.com/in/daryna-shevchuk-19101993/
 Team: Dmytro Kukharchuk https://www.linkedin.com/in/дмитрий-кухарчук-4979a51b2/
 Portfolio: Oleksandr Sybirko https://www.linkedin.com/in/александр-сибирко-00038819a
-Footer: Kostiantyn Harbuz
+Footer: Kostiantyn Harbuz https://www.linkedin.com/in/kostiantyn-harbuz-758aa71b2/
 
 
 ### Prerequisites
