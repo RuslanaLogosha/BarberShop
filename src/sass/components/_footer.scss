@@ -4,6 +4,9 @@
 @media screen and (min-width: 1280px) {
   .flex-container {
     display: flex;
+    max-width: 1280px;
+    margin: auto;
+    padding-right: 50px;
   }
 }
 
@@ -20,6 +23,8 @@
     padding-bottom: 100px;
     padding-left: 39px;
     padding-right: 39px;
+    max-width: 768px;
+    margin: auto;
   }
   @media screen and (min-width: 1280px) {
     padding-top: 130px;
@@ -140,7 +145,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   scroll-snap-align: center;
-  
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
@@ -180,6 +185,9 @@
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    max-width: 768px;
+    margin: auto;
   }
 }
 
@@ -222,6 +230,9 @@
 
 .contact-icon {
   margin-right: 16px;
+}
+.worktime {
+  padding-right: 10px;
 }
 .worktime-title {
   display: inline-flex;
