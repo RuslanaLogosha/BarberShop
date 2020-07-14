@@ -786,6 +786,14 @@ p {
 .next:hover {
   color: rgba(157, 164, 189, 0.6);
 }
+@media screen and (max-width: 480px) {
+  .prev,
+.next {
+    opacity: 0;
+    padding: 100%;
+    margin: 0;
+  }
+}
 
 .next {
   right: 125px;
@@ -804,6 +812,11 @@ p {
   transition: background-color 0.6s ease, transform 0.6s ease;
   z-index: 5;
 }
+@media screen and (max-width: 480px) {
+  .line {
+    display: none;
+  }
+}
 
 .line.active {
   background-color: #ffffff;
@@ -821,23 +834,77 @@ p {
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 30px;
+  right: 10px;
   z-index: 99;
-  font-size: 18px;
+  font-size: 25px;
   border: none;
   outline: none;
-  background-color: #ff6c00;
-  color: white;
+  background-color: transparent;
+  color: #ff6c00;
   cursor: pointer;
-  padding: 15px;
+  padding: 10px 15px;
   border-radius: 4px;
 }
 
 #myBtn:hover {
-  background-color: #555555;
+  color: #555555;
 }
 
+/* Animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* zoomIn */
+/* @keyframes btnEntrance { 
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 1;
+  }    
+} */
+/* fadeInUp */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* zoomOut */
+/* @keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+} */
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
 .section {
   font-family: "Open Sans", sans-serif;
   scroll-snap-align: center;
@@ -1289,6 +1356,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .block {
+    padding: 20px;
     height: 133px;
   }
 }
@@ -1334,31 +1402,16 @@ p {
     margin-bottom: 30px;
   }
   .team-svg {
+    fill: #303030;
     background-color: #ffffff;
     border-radius: 50%;
     padding: 0;
     line-height: 0;
     fill: #303030;
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    animation: pulsing 2s infinite;
-  }
-  @-webkit-keyframes pulsing {
-    0% {
-      transform: scale(0.5, 0.5);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
-  }
-  @keyframes pulsing {
-    0% {
-      transform: scale(0.5, 0.5);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    box-shadow: 1px 1px 5px #ff6c00;
     transform: rotate(360deg);
     fill: #ff6c00;
   }
@@ -1431,31 +1484,16 @@ p {
     margin-bottom: 30px;
   }
   .team-svg {
+    fill: #303030;
     background-color: #ffffff;
     border-radius: 50%;
     padding: 0;
     line-height: 0;
     fill: #303030;
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    animation: pulsing 2s infinite;
-  }
-  @-webkit-keyframes pulsing {
-    0% {
-      transform: scale(0.2, 0.2);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
-  }
-  @keyframes pulsing {
-    0% {
-      transform: scale(0.2, 0.2);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    box-shadow: 1px 1px 5px #ff6c00;
     transform: rotate(360deg);
     fill: #ff6c00;
   }
@@ -1531,14 +1569,16 @@ p {
     margin-left: 30px;
   }
   .team-svg {
+    fill: #303030;
     background-color: #ffffff;
     border-radius: 50%;
     padding: 0;
     line-height: 0;
     fill: #303030;
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    box-shadow: 1px 1px 5px #ff6c00;
     transform: rotate(360deg);
     fill: #ff6c00;
   }
@@ -1639,6 +1679,9 @@ p {
 @media screen and (min-width: 1280px) {
   .flex-container {
     display: flex;
+    max-width: 1280px;
+    margin: auto;
+    padding-right: 50px;
   }
 }
 .online-rec {
@@ -1655,6 +1698,8 @@ p {
     padding-bottom: 100px;
     padding-left: 39px;
     padding-right: 39px;
+    max-width: 768px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1835,6 +1880,9 @@ p {
   .contacts-flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    max-width: 768px;
+    margin: auto;
   }
 }
 
@@ -1879,6 +1927,10 @@ p {
 
 .contact-icon {
   margin-right: 16px;
+}
+
+.worktime {
+  padding-right: 10px;
 }
 
 .worktime-title {
@@ -2158,9 +2210,9 @@ body.modal-open {
 }
 @media screen and (max-width: 767px) {
   .backdrop {
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-top: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 

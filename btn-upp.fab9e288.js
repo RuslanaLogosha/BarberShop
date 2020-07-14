@@ -118,26 +118,76 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/btn-upp.js":[function(require,module,exports) {
-//Get the button
-var mybutton = document.querySelector('[button-top]');
-mybutton.addEventListener('click', topFunction); // When the user scrolls down 20px from the top of the document, show the button
-
-window.onscroll = function () {
-  scrollFunction();
-};
+// //Get the button
+// const mybutton = document.querySelector('[button-top]');
+// mybutton.addEventListener('click', topFunction);
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () {
+//   scrollFunction();
+// };
+// function scrollFunction() {
+//   if (
+//     document.body.scrollTop > 300 ||
+//     document.documentElement.scrollTop > 300
+//   ) {
+//     mybutton.style.display = 'block';
+//   } else {
+//     mybutton.style.display = 'none';
+//   }
+// }
+// // When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
+var backToTopButton = document.querySelector('#myBtn');
+window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = 'block';
+  if (window.pageYOffset > 300) {
+    // Show backToTopButton
+    if (!backToTopButton.classList.contains('btnEntrance')) {
+      backToTopButton.classList.remove('btnExit');
+      backToTopButton.classList.add('btnEntrance');
+      backToTopButton.style.display = 'block';
+    }
   } else {
-    mybutton.style.display = 'none';
+    // Hide backToTopButton
+    if (backToTopButton.classList.contains('btnEntrance')) {
+      backToTopButton.classList.remove('btnEntrance');
+      backToTopButton.classList.add('btnExit');
+      setTimeout(function () {
+        backToTopButton.style.display = 'none';
+      }, 150);
+    }
   }
-} // When the user clicks on the button, scroll to the top of the document
+}
 
+backToTopButton.addEventListener('click', smoothScrollBackToTop); // function backToTop() {
+//   window.scrollTo(0, 0);
+// }
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+function smoothScrollBackToTop() {
+  var targetPosition = 0;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var duration = 750;
+  var start = null;
+  window.requestAnimationFrame(step);
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    var progress = timestamp - start;
+    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t * t + b;
+  t -= 2;
+  return c / 2 * (t * t * t + 2) + b;
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -167,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49560" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
