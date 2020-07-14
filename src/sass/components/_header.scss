@@ -56,7 +56,7 @@
   width: 69px;
   height: 56px;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (min-width: $viewport-breakpoint-1 - 59) and (max-width: $viewport-breakpoint-2 - 1) {
     color: $color-pale;
   }
   @media screen and (min-width: $viewport-breakpoint-2) {
