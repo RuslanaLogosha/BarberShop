@@ -261,6 +261,7 @@
 
   &-tel {
     @extend %header-link;
+    @include transition(color);
   }
 
   &-button {
@@ -427,6 +428,7 @@
 }
 .prev,
 .next {
+  @include transition(color);
   cursor: pointer;
   position: absolute;
 
@@ -437,7 +439,7 @@
   margin-bottom: 40px;
   margin-right: 39px;
   color: $color-pale;
-  transition: color 0.6s ease;
+  // transition: color 0.6s ease;
   user-select: none;
   font-weight: 600;
   font-size: 11px;
@@ -462,6 +464,7 @@
 }
 
 .line {
+  @include transition('background, transform');
   cursor: pointer;
   display: block;
   width: 8px;
@@ -470,7 +473,7 @@
   transform: scaleX(1);
   background-color: $color-text-on-dark;
   transform-origin: center right;
-  transition: background-color 0.6s ease, transform 0.6s ease;
+  // transition: background-color 0.6s ease, transform 0.6s ease;
   z-index: 5;
   @media screen and (max-width: 480px) {
     display: none;
