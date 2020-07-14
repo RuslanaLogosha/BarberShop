@@ -325,6 +325,7 @@
   }
   &-link {
     @extend %header-link;
+    @include transition(color);
 
     @media screen and (min-width: $viewport-breakpoint-2) {
       padding-top: 12px;
@@ -480,6 +481,7 @@
   }
 }
 #myBtn {
+  @include transition(color);
   display: none;
   position: fixed;
   bottom: 30px;

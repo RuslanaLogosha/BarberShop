@@ -11,6 +11,7 @@
 }
 
 %btn {
+  @include transition(background-color);
   padding: 12px 19px;
   border: 1px solid $color-accent;
 
