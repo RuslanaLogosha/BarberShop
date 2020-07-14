@@ -81,6 +81,10 @@
 
   color: $color-pale;
 
+  @media screen and (max-width: $viewport-breakpoint-1) {
+    font-size: 40px;
+  }
+
   @media screen and (min-width: $viewport-breakpoint-3) {
     font-size: 72px;
     line-height: 1.19;
