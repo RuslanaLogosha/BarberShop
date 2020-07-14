@@ -392,9 +392,9 @@
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
     height: 580px;
   }
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
-    height: 680px;
-  }
+  // @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  //   height: 680px;
+  // }
 
   &-slide {
     &.current {
