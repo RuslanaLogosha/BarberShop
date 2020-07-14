@@ -87,25 +87,154 @@
 
   <section class="slider">
     <div class="mySlides">
-      <img
-        class="slider-slide current"
-        src="./images/slider1-desk.jpg"
-        alt="Слайд №1"
-      />
+      <picture>
+        <source
+          srcset="./images/slider1-mob.webp 1x, ./images/slider1-mob@2x.webp 2x"
+          type="image/webp"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./images/slider1-mob.jpg 1x, ./images/slider1-mob@2x.jpg 2x"
+          type="image/jpg"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./images/slider1-tab.webp 1x, ./images/slider1-tab@2x.webp 2x"
+          type="image/webp"
+          media=" (max-width: 1279px)"
+        />
+        <source
+          srcset="./images/slider1-tab.jpg 1x, ./images/slider1-tab@2x.jpg 2x"
+          type="image/jpg"
+          media=" (max-width: 1279px)"
+        />
+        <source
+          srcset="
+            ./images/slider1-desk.webp    1x,
+            ./images/slider1-desk@2x.webp 2x
+          "
+          type="image/webp"
+          media=" (min-width: 1280px)"
+        />
+        <source
+          srcset="./images/slider1-desk.jpg 1x, ./images/slider1-desk@2x.jpg 2x"
+          type="image/jpg"
+          media=" (min-width: 1280px)"
+        />
+        <img
+          class="slider-slide current"
+          srcset="
+            ./images/slider1-mob.jpg     1x,
+            ./images/slider1-mob@2x.jpg  2x,
+            ./images/slider1-tab.jpg     1x,
+            ./images/slider1-tab@2x.jpg  2x,
+            ./images/slider1-desk.jpg    1x,
+            ./images/slider1-desk@2x.jpg 2x
+          "
+          scr="./images/slider1-tab.jpg"
+          alt="Слайд №1"
+        />
+      </picture>
     </div>
     <div class="mySlides">
-      <img
-        class="slider-slide current"
-        src="./images/slider2-desk.jpg"
-        alt="Слайд №2"
-      />
+      <picture>
+        <source
+          srcset="./images/slider2-mob.webp 1x, ./images/slider2-mob@2x.webp 2x"
+          type="image/webp"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./images/slider2-mob.jpg 1x, ./images/slider2-mob@2x.jpg 2x"
+          type="image/jpg"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./images/slider2-tab.webp 1x, ./images/slider2-tab@2x.webp 2x"
+          type="image/webp"
+          media=" (max-width: 1279px)"
+        />
+        <source
+          srcset="./images/slider2-tab.jpg 1x, ./images/slider2-tab@2x.jpg 2x"
+          type="image/jpg"
+          media=" (max-width: 1279px)"
+        />
+        <source
+          srcset="
+            ./images/slider2-desk.webp    1x,
+            ./images/slider2-desk@2x.webp 2x
+          "
+          type="image/webp"
+          media=" (min-width: 1280px)"
+        />
+        <source
+          srcset="./images/slider2-desk.jpg 1x, ./images/slider2-desk@2x.jpg 2x"
+          type="image/jpg"
+          media=" (min-width: 1280px)"
+        />
+        <img
+          class="slider-slide current"
+          srcset="
+            ./images/slider2-mob.jpg     1x,
+            ./images/slider2-mob@2x.jpg  2x,
+            ./images/slider2-tab.jpg     1x,
+            ./images/slider2-tab@2x.jpg  2x,
+            ./images/slider2-desk.jpg    1x,
+            ./images/slider2-desk@2x.jpg 2x
+          "
+          scr="./images/slider2-tab.jpg"
+          alt="Слайд №2"
+        />
+      </picture>
     </div>
     <div class="mySlides">
-      <img
-        class="slider-slide current"
-        src="./images/slider3-desk.jpg"
-        alt="Слайд №3"
-      />
+      <picture>
+        <source
+          srcset="./images/slider3-mob.webp 1x, ./images/slider3-mob@2x.webp 2x"
+          type="image/webp"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./images/slider3-mob.jpg 1x, ./images/slider3-mob@2x.jpg 2x"
+          type="image/jpg"
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="./images/slider3-tab.webp 1x, ./images/slider3-tab@2x.webp 2x"
+          type="image/webp"
+          media=" (max-width: 1279px)"
+        />
+        <source
+          srcset="./images/slider3-tab.jpg 1x, ./images/slider3-tab@2x.jpg 2x"
+          type="image/jpg"
+          media=" (max-width: 1279px)"
+        />
+        <source
+          srcset="
+            ./images/slider3-desk.webp    1x,
+            ./images/slider3-desk@2x.webp 2x
+          "
+          type="image/webp"
+          media=" (min-width: 1280px)"
+        />
+        <source
+          srcset="./images/slider3-desk.jpg 1x, ./images/slider3-desk@2x.jpg 2x"
+          type="image/jpg"
+          media=" (min-width: 1280px)"
+        />
+        <img
+          class="slider-slide current"
+          srcset="
+            ./images/slider3-mob.jpg     1x,
+            ./images/slider3-mob@2x.jpg  2x,
+            ./images/slider3-tab.jpg     1x,
+            ./images/slider3-tab@2x.jpg  2x,
+            ./images/slider3-desk.jpg    1x,
+            ./images/slider3-desk@2x.jpg 2x
+          "
+          scr="./images/slider3-tab.jpg"
+          alt="Слайд №3"
+        />
+      </picture>
     </div>
 
     <!-- <a class="prev" onclick="plusSlides(-1)">Вперед</a>
