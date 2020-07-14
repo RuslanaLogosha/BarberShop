@@ -748,11 +748,6 @@ p {
     height: 580px;
   }
 }
-@media screen and (max-width: 767px) {
-  .slider {
-    height: 680px;
-  }
-}
 .slider-slide {
   display: block;
   width: 100%;
