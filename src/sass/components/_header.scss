@@ -117,6 +117,7 @@
 
   &-link {
     @extend %accent-hover;
+    @include transition(color);
 
     display: block;
     font-weight: 600;
@@ -170,12 +171,13 @@
   z-index: 2;
 
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
-    @include transition(transform);
-    transform: translateX(101%);
-
     position: absolute;
     top: 0;
     right: 0;
+
+    transform: translateX(101%);
+    // display: none;
+    @include transition(transform);
 
     width: calc((100% - 143px) - (100% - 480px) / 2);
     height: 100vh;
@@ -188,9 +190,14 @@
       -2px 0px 4px rgba(0, 0, 0, 0.08), -4px 0px 8px rgba(0, 0, 0, 0.04);
 
     &.is-open {
-      display: block;
-      overflow-y: auto;
       transform: translateX(0);
+      // display: block;
+
+      overflow-y: auto;
+
+      @media screen and (max-width: $viewport-breakpoint-1 - 60) {
+        width: 100%;
+      }
     }
 
     &-element:not(:last-child) {
