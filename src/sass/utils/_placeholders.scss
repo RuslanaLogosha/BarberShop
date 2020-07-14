@@ -1,3 +1,15 @@
+@mixin transition(
+  $prop: all,
+  $time: 250ms,
+  $cube: cubic-bezier(0.4, 0, 0.2, 1),
+  $delay: 0ms
+) {
+  transition-property: #{$prop};
+  transition-duration: #{$time};
+  transition-timing-function: #{$cube};
+  transition-delay: #{$delay};
+}
+
 %btn {
   padding: 12px 19px;
   border: 1px solid $color-accent;
@@ -12,7 +24,8 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-pale;
     background-color: $color-accent;
   }

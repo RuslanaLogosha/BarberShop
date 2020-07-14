@@ -81,7 +81,7 @@
 
   color: $color-pale;
 
-  @media screen and (max-width: $viewport-breakpoint-1) {
+  @media screen and (max-width: $viewport-breakpoint-1 - 1) {
     font-size: 40px;
   }
 
