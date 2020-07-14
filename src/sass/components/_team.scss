@@ -35,35 +35,19 @@
     }
 
     &-svg {
+      fill: $color-basic;
       background-color: $color-pale;
       border-radius: 50%;
+
       padding: 0;
       line-height: 0;
       fill: $color-basic;
-      transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-      animation: pulsing 2s infinite;
     }
-    @-webkit-keyframes pulsing {
-      0% {
-        transform: scale(0.5, 0.5);
-      }
-      50% {
-        transform: scale(1, 1);
-      }
-    }
-
-    @keyframes pulsing {
-      0% {
-        transform: scale(0.5, 0.5);
-      }
-      50% {
-        transform: scale(1, 1);
-      }
-    }
-
     &-svg:hover,
     &-svg:focus {
+      box-shadow: 1px 1px 5px $color-accent;
       transform: rotate(360deg);
       fill: $color-accent;
     }
@@ -144,33 +128,19 @@
       margin-bottom: 30px;
     }
     &-svg {
+      fill: $color-basic;
       background-color: $color-pale;
       border-radius: 50%;
+
       padding: 0;
       line-height: 0;
       fill: $color-basic;
-      transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-      animation: pulsing 2s infinite;
-    }
-    @-webkit-keyframes pulsing {
-      0% {
-        transform: scale(0.2, 0.2);
-      }
-      50% {
-        transform: scale(1, 1);
-      }
-    }
-    @keyframes pulsing {
-      0% {
-        transform: scale(0.2, 0.2);
-      }
-      50% {
-        transform: scale(1, 1);
-      }
     }
     &-svg:hover,
     &-svg:focus {
+      box-shadow: 1px 1px 5px $color-accent;
       transform: rotate(360deg);
       fill: $color-accent;
     }
@@ -255,16 +225,19 @@
     }
 
     &-svg {
+      fill: $color-basic;
       background-color: $color-pale;
       border-radius: 50%;
+
       padding: 0;
       line-height: 0;
       fill: $color-basic;
-      transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     &-svg:hover,
     &-svg:focus {
+      box-shadow: 1px 1px 5px $color-accent;
       transform: rotate(360deg);
       fill: $color-accent;
     }
