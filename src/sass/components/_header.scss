@@ -56,7 +56,7 @@
   width: 69px;
   height: 56px;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (min-width: $viewport-breakpoint-1 - 59) and (max-width: $viewport-breakpoint-2 - 1) {
     color: $color-pale;
   }
   @media screen and (min-width: $viewport-breakpoint-2) {
@@ -80,6 +80,10 @@
   letter-spacing: 0.05em;
 
   color: $color-pale;
+
+  @media screen and (max-width: $viewport-breakpoint-1 - 1) {
+    font-size: 40px;
+  }
 
   @media screen and (min-width: $viewport-breakpoint-3) {
     font-size: 72px;
@@ -113,6 +117,7 @@
 
   &-link {
     @extend %accent-hover;
+    @include transition(color);
 
     display: block;
     font-weight: 600;
@@ -166,11 +171,13 @@
   z-index: 2;
 
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
-    display: none;
-
     position: absolute;
     top: 0;
     right: 0;
+
+    transform: translateX(101%);
+    // display: none;
+    @include transition(transform);
 
     width: calc((100% - 143px) - (100% - 480px) / 2);
     height: 100vh;
@@ -183,8 +190,14 @@
       -2px 0px 4px rgba(0, 0, 0, 0.08), -4px 0px 8px rgba(0, 0, 0, 0.04);
 
     &.is-open {
-      display: block;
+      transform: translateX(0);
+      // display: block;
+
       overflow-y: auto;
+
+      @media screen and (max-width: $viewport-breakpoint-1 - 60) {
+        width: 100%;
+      }
     }
 
     &-element:not(:last-child) {
@@ -248,6 +261,7 @@
 
   &-tel {
     @extend %header-link;
+    @include transition(color);
   }
 
   &-button {
@@ -321,6 +335,7 @@
   }
   &-link {
     @extend %header-link;
+    @include transition(color);
 
     @media screen and (min-width: $viewport-breakpoint-2) {
       padding-top: 12px;
@@ -372,6 +387,7 @@
   }
 }
 
+//slider
 .slide-marks {
   text-align: center;
   position: absolute;
@@ -412,6 +428,7 @@
 }
 .prev,
 .next {
+  @include transition(color);
   cursor: pointer;
   position: absolute;
 
@@ -422,7 +439,7 @@
   margin-bottom: 40px;
   margin-right: 39px;
   color: $color-pale;
-  transition: color 0.6s ease;
+  // transition: color 0.6s ease;
   user-select: none;
   font-weight: 600;
   font-size: 11px;
@@ -447,6 +464,7 @@
 }
 
 .line {
+  @include transition('background, transform');
   cursor: pointer;
   display: block;
   width: 8px;
@@ -455,7 +473,7 @@
   transform: scaleX(1);
   background-color: $color-text-on-dark;
   transform-origin: center right;
-  transition: background-color 0.6s ease, transform 0.6s ease;
+  // transition: background-color 0.6s ease, transform 0.6s ease;
   z-index: 5;
   @media screen and (max-width: 480px) {
     display: none;
@@ -466,16 +484,18 @@
   background-color: $color-pale;
   transform: scaleX(2.25);
 }
-
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
+  // On smaller screens, decrease text size
   .prev,
   .next,
   .text {
     font-size: 11px;
   }
 }
+
+//btn-up
 #myBtn {
+  @include transition(color);
   display: none;
   position: fixed;
   bottom: 30px;
