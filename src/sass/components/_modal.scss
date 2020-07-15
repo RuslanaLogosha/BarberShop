@@ -14,7 +14,14 @@ body.modal-open {
   padding: 40px;
   background: $color-footer-background;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 399px) {
+    width: 280px;
+    height: 510px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 400px) {
     width: 360px;
     height: 470px;
     margin-right: auto;
@@ -24,6 +31,7 @@ body.modal-open {
   @media screen and (min-width: 768px) {
     top: 50%;
     left: 50%;
+    margin: 0px;
 
     transform: translate(-50%, -50%) scale(1);
 
@@ -96,8 +104,15 @@ body.modal-open {
   background-color: $color-footer-background;
   color: $color-pale;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 399px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 400px) {
     width: 280px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 370px;
   }
 }
 
@@ -152,8 +167,16 @@ body.modal-open {
   color: white;
   outline: none;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 399px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 400px) {
     width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 370px;
   }
 }
 
@@ -186,7 +209,7 @@ body.modal-open {
   top: 8px;
   right: 8px;
   padding: 0px;
-  padding-top: 2px;
+  padding-top: 3px;
 
   width: 30px;
   height: 30px;
