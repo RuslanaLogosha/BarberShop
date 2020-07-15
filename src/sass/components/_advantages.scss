@@ -1,6 +1,7 @@
 .advantages {
   @extend %section;
   font-family: $font-main-text;
+  scroll-snap-align: center;
 
   &-thumb {
     display: flex;
