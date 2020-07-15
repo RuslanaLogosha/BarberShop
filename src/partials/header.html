@@ -72,7 +72,7 @@
   </header>
 
   <div class="container">
-    <section class="greeting">
+    <div class="greeting">
       <h2 class="section-title greeting-subtitle">
         A hair salon for men in Kyiv
       </h2>
@@ -82,10 +82,10 @@
         Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
         вкусом.
       </p>
-    </section>
+    </div>
   </div>
 
-  <section class="slider">
+  <div class="slider">
     <div class="mySlides">
       <picture>
         <source
@@ -237,23 +237,23 @@
       </picture>
     </div>
 
-    <!-- <a class="prev" onclick="plusSlides(-1)">Вперед</a>
-    <a class="next" onclick="plusSlides(1)">Назад</a> -->
     <a class="prev" data-slider-next>Вперед</a>
     <a class="next" data-slider-prev>Назад</a>
     <!-- data-slider-prev -->
 
     <div class="slide-marks">
-      <!-- <span class="line" onclick="currentSlide(1)"></span>
-      <span class="line" onclick="currentSlide(2)"></span>
-      <span class="line" onclick="currentSlide(3)"></span> -->
       <span class="line" data-slider-line></span>
       <span class="line" data-slider-line></span>
       <span class="line" data-slider-line></span>
     </div>
-  </section>
+  </div>
 
-  <button id="myBtn" button-top title="Go to top">
+  <button
+    id="myBtn"
+    data-button-top
+    title="Go to top"
+    aria-label="вернуться вверх страницы"
+  >
     <i class="fas fa-angle-double-up"></i>
   </button>
 </div>
