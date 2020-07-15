@@ -81,7 +81,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
@@ -509,7 +509,6 @@ body {
 
   .line {
     @include transition('background, transform');
-    cursor: pointer;
     display: block;
     width: 8px;
     height: 2px;
