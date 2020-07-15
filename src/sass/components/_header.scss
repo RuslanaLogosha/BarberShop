@@ -175,8 +175,8 @@
     top: 0;
     right: 0;
 
-    transform: translateX(101%);
-    // display: none;
+    // transform: translateX(101%);
+    display: none;
     @include transition(transform);
 
     width: calc((100% - 143px) - (100% - 480px) / 2);
@@ -190,8 +190,8 @@
       -2px 0px 4px rgba(0, 0, 0, 0.08), -4px 0px 8px rgba(0, 0, 0, 0.04);
 
     &.is-open {
-      transform: translateX(0);
-      // display: block;
+      // transform: translateX(0);
+      display: block;
 
       overflow-y: auto;
 

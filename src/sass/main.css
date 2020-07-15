@@ -312,12 +312,6 @@ p {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -335,6 +329,14 @@ p {
 }
 
 .page-header-button, .button, .form-button, .submit-button {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   padding: 12px 19px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
@@ -347,9 +349,30 @@ p {
   text-transform: uppercase;
 }
 
-.page-header-button:hover, .button:hover, .form-button:hover, .submit-button:hover {
+.page-header-button:hover, .button:hover, .form-button:hover, .submit-button:hover, .page-header-button:focus, .button:focus, .form-button:focus, .submit-button:focus {
   color: #ffffff;
   background-color: #ff6c00;
+}
+
+@media screen and (max-width: 767px) {
+  .section, .prices, .advantages, .container-portfolio {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section, .prices, .advantages, .container-portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section, .prices, .advantages, .container-portfolio {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .page-social::before, .section-title, .prices .section-title, .advantages-subtitle {
@@ -448,7 +471,7 @@ p {
   height: 56px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 421px) and (max-width: 767px) {
   .logo-barbershop {
     color: #ffffff;
   }
@@ -477,6 +500,12 @@ p {
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: #ffffff;
+}
+
+@media screen and (max-width: 479px) {
+  .title-greatest {
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -512,6 +541,14 @@ p {
 }
 
 .page-social-link {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   display: block;
   font-weight: 600;
   font-size: 14px;
@@ -566,10 +603,20 @@ p {
 
 @media screen and (max-width: 767px) {
   .menu-mobile-container {
-    display: none;
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
     width: calc((100% - 143px) - (100% - 480px) / 2);
     height: 100vh;
     padding: 40px;
@@ -582,6 +629,15 @@ p {
     display: block;
     overflow-y: auto;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 420px) {
+  .menu-mobile-container.is-open {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .menu-mobile-container-element:not(:last-child) {
     margin-bottom: 64px;
   }
@@ -685,6 +741,17 @@ p {
   }
 }
 
+.page-header-tel {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
 .page-header-button {
   background-color: transparent;
 }
@@ -772,6 +839,17 @@ p {
   }
 }
 
+.site-nav-link {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
 @media screen and (min-width: 768px) {
   .site-nav-link {
     padding-top: 12px;
@@ -852,12 +930,6 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .slider {
-    height: 680px;
-  }
-}
-
 .slider-slide {
   display: block;
   width: 100%;
@@ -876,6 +948,14 @@ p {
 
 .prev,
 .next {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   cursor: pointer;
   position: absolute;
   bottom: 0;
@@ -885,8 +965,6 @@ p {
   margin-bottom: 40px;
   margin-right: 39px;
   color: #ffffff;
-  -webkit-transition: color 0.6s ease;
-  transition: color 0.6s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -920,6 +998,16 @@ p {
 }
 
 .line {
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   cursor: pointer;
   display: block;
   width: 8px;
@@ -930,10 +1018,6 @@ p {
   background-color: #9da4bd;
   -webkit-transform-origin: center right;
           transform-origin: center right;
-  -webkit-transition: background-color 0.6s ease, -webkit-transform 0.6s ease;
-  transition: background-color 0.6s ease, -webkit-transform 0.6s ease;
-  transition: background-color 0.6s ease, transform 0.6s ease;
-  transition: background-color 0.6s ease, transform 0.6s ease, -webkit-transform 0.6s ease;
   z-index: 5;
 }
 
@@ -949,7 +1033,6 @@ p {
           transform: scaleX(2.25);
 }
 
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
   .next,
@@ -959,6 +1042,14 @@ p {
 }
 
 #myBtn {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
   display: none;
   position: fixed;
   bottom: 30px;
@@ -1072,8 +1163,6 @@ p {
 
 .container.about-us {
   display: block;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .section-title-secondary {
@@ -1215,8 +1304,6 @@ p {
 .prices {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 84px;
-  padding-bottom: 84px;
   background-color: #111319;
   background-image: url(../images/prices-overlay-mob.png);
   background-size: cover;
@@ -1225,20 +1312,6 @@ p {
   width: 100%;
   height: auto;
   scroll-snap-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .prices {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .prices {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -1438,9 +1511,8 @@ p {
 }
 
 .advantages {
-  padding-top: 84px;
-  padding-bottom: 84px;
   font-family: "Open Sans", sans-serif;
+  scroll-snap-align: center;
 }
 
 .advantages-thumb {
@@ -1511,8 +1583,6 @@ p {
 
 @media screen and (min-width: 768px) {
   .advantages {
-    padding-top: 100px;
-    padding-bottom: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1523,8 +1593,6 @@ p {
 
 @media screen and (min-width: 1280px) {
   .advantages {
-    padding-top: 130px;
-    padding-bottom: 130px;
     padding-right: 70px;
     padding-left: 100px;
     display: -webkit-box;
@@ -1605,6 +1673,7 @@ p {
 
 @media screen and (min-width: 1280px) {
   .block {
+    padding: 20px;
     height: 133px;
   }
 }
@@ -1657,39 +1726,20 @@ p {
     margin-bottom: 30px;
   }
   .team-svg {
+    fill: #303030;
     background-color: #ffffff;
     border-radius: 50%;
     padding: 0;
     line-height: 0;
     fill: #303030;
-    -webkit-transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-animation: pulsing 2s infinite;
-            animation: pulsing 2s infinite;
-  }
-  @-webkit-keyframes pulsing {
-    0% {
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
-    }
-    50% {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-    }
-  }
-  @keyframes pulsing {
-    0% {
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
-    }
-    50% {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-    }
+    -webkit-transition: -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    -webkit-box-shadow: 1px 1px 5px #ff6c00;
+            box-shadow: 1px 1px 5px #ff6c00;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     fill: #ff6c00;
@@ -1772,39 +1822,20 @@ p {
     margin-bottom: 30px;
   }
   .team-svg {
+    fill: #303030;
     background-color: #ffffff;
     border-radius: 50%;
     padding: 0;
     line-height: 0;
     fill: #303030;
-    -webkit-transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-animation: pulsing 2s infinite;
-            animation: pulsing 2s infinite;
-  }
-  @-webkit-keyframes pulsing {
-    0% {
-      -webkit-transform: scale(0.2, 0.2);
-              transform: scale(0.2, 0.2);
-    }
-    50% {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-    }
-  }
-  @keyframes pulsing {
-    0% {
-      -webkit-transform: scale(0.2, 0.2);
-              transform: scale(0.2, 0.2);
-    }
-    50% {
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-    }
+    -webkit-transition: -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    -webkit-box-shadow: 1px 1px 5px #ff6c00;
+            box-shadow: 1px 1px 5px #ff6c00;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     fill: #ff6c00;
@@ -1890,17 +1921,20 @@ p {
     margin-left: 30px;
   }
   .team-svg {
+    fill: #303030;
     background-color: #ffffff;
     border-radius: 50%;
     padding: 0;
     line-height: 0;
     fill: #303030;
-    -webkit-transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .team-svg:hover, .team-svg:focus {
+    -webkit-box-shadow: 1px 1px 5px #ff6c00;
+            box-shadow: 1px 1px 5px #ff6c00;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     fill: #ff6c00;
@@ -1948,25 +1982,6 @@ p {
 
 .team {
   scroll-snap-align: center;
-}
-
-.container-portfolio {
-  padding-top: 84px;
-  padding-bottom: 84px;
-}
-
-@media screen and (min-width: 768px) {
-  .container-portfolio {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .container-portfolio {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
 }
 
 .list-portfolio {
@@ -2022,6 +2037,9 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 1280px;
+    margin: auto;
+    padding-right: 50px;
   }
 }
 
@@ -2040,6 +2058,8 @@ p {
     padding-bottom: 100px;
     padding-left: 39px;
     padding-right: 39px;
+    max-width: 768px;
+    margin: auto;
   }
 }
 
@@ -2271,6 +2291,11 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 768px;
+    margin: auto;
   }
 }
 
@@ -2321,6 +2346,10 @@ p {
 
 .contact-icon {
   margin-right: 16px;
+}
+
+.worktime {
+  padding-right: 10px;
 }
 
 .worktime-title {
@@ -2652,9 +2681,9 @@ body.modal-open {
 
 @media screen and (max-width: 767px) {
   .backdrop {
-    padding-top: 20px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-top: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
