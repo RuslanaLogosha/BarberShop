@@ -1,41 +1,17 @@
-// //Get the button
-// const mybutton = document.querySelector('[button-top]');
-// mybutton.addEventListener('click', topFunction);
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-
-// function scrollFunction() {
-//   if (
-//     document.body.scrollTop > 300 ||
-//     document.documentElement.scrollTop > 300
-//   ) {
-//     mybutton.style.display = 'block';
-//   } else {
-//     mybutton.style.display = 'none';
-//   }
-// }
-
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
 const backToTopButton = document.querySelector('#myBtn');
 
 window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
   if (window.pageYOffset > 300) {
-    // Show backToTopButton
+    // Показывает кнопку поднятия вверх
     if (!backToTopButton.classList.contains('btnEntrance')) {
       backToTopButton.classList.remove('btnExit');
       backToTopButton.classList.add('btnEntrance');
       backToTopButton.style.display = 'block';
     }
   } else {
-    // Hide backToTopButton
+    // Скрывает кнопку поднятия вверх
     if (backToTopButton.classList.contains('btnEntrance')) {
       backToTopButton.classList.remove('btnEntrance');
       backToTopButton.classList.add('btnExit');
@@ -48,10 +24,7 @@ function scrollFunction() {
 
 backToTopButton.addEventListener('click', smoothScrollBackToTop);
 
-// function backToTop() {
-//   window.scrollTo(0, 0);
-// }
-
+// Добавляет плавность
 function smoothScrollBackToTop() {
   const targetPosition = 0;
   const startPosition = window.pageYOffset;
@@ -78,3 +51,28 @@ function easeInOutCubic(t, b, c, d) {
   t -= 2;
   return (c / 2) * (t * t * t + 2) + b;
 }
+
+// //Get the button
+// const mybutton = document.querySelector('[button-top]');
+// mybutton.addEventListener('click', topFunction);
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () {
+//   scrollFunction();
+// };
+
+// function scrollFunction() {
+//   if (
+//     document.body.scrollTop > 300 ||
+//     document.documentElement.scrollTop > 300
+//   ) {
+//     mybutton.style.display = 'block';
+//   } else {
+//     mybutton.style.display = 'none';
+//   }
+// }
+
+// // When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
