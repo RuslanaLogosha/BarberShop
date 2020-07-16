@@ -1,6 +1,9 @@
 .page-footer {
   background-color: #191c26;
 }
+address {
+  font-style: inherit;
+}
 @media screen and (min-width: 768px) {
   .footer-flex {
     display: flex;
@@ -21,32 +24,35 @@
     display: flex;
     max-width: 1280px;
     margin: auto;
-    padding-right: 50px;
+    padding-left: 55px;
+    padding-right: 55px;
   }
 }
 
 .online-rec {
-  padding-top: 84px;
-  padding-bottom: 84px;
-  padding-left: 31px;
-  padding-right: 31px;
-  max-width: 480px;
-  margin-right: auto;
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    padding-left: 31px;
+    padding-right: 31px;
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    max-width: 768px;
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 39px;
     padding-right: 39px;
-    max-width: 768px;
     margin: auto;
   }
   @media screen and (min-width: 1280px) {
+    max-width: 640px;
     padding-top: 130px;
     padding-bottom: 130px;
-    padding-left: 55px;
-    padding-right: 25px;
+    margin-right: 25px;
   }
   background-color: #191c26;
 }
@@ -100,7 +106,7 @@
     color: $color-pale;
   }
 }
-.contact-input {
+.message-input {
   width: 100%;
   margin-bottom: 44px;
   padding: 8px 8px 8px 0px;
@@ -117,7 +123,7 @@
   border-left: none;
   border-bottom: 1px solid $color-text-on-dark;
 
-  transition: border-bottom 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-family: $font-main-text;
   color: $color-input-text;
@@ -186,7 +192,6 @@
     }
   }
 
-  font-style: inherit;
   @media screen and (min-width: 768px) {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -194,12 +199,13 @@
     padding-right: 39px;
   }
   @media screen and (min-width: 1280px) {
+    width: 100%;
     padding-top: 130px;
     padding-bottom: 130px;
     padding-left: 115px;
   }
 }
-.contacts-flex {
+.contacts-flex-container {
   @media screen and (max-width: 767px) {
     max-width: 480px;
     margin-right: auto;
