@@ -4,15 +4,13 @@
 
 ## Tech stack 
 
-Для реализации проекта были использованы такие технологии: HTML5 (40.1%), CSS3 (56.7%), JavaScript (3.2%).
+Для реализации проекта были использованы такие технологии: HTML5 (41.1%), CSS3 (53%), JavaScript (5.9%).
 
 ## Developers
 
 - Team lead: [Ruslana Logosha](https://www.linkedin.com/in/ruslana-logosha-674b9241/)
 - Scrum Master: [Olga Levshukova](https://www.linkedin.com/in/olga-levshukova-62831343/)
-
-Проект был разработан: 
-
+======================
 - Header: [Denys Onyshchuk](https://www.linkedin.com/in/onishchuk-denis)
 - About-us: [Daria Churkina](https://www.linkedin.com/in/daria-churkina-823a4b108/)
 - Services-and-prices: [Olga Levshukova](https://www.linkedin.com/in/olga-levshukova-62831343/)
