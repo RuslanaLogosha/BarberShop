@@ -10,7 +10,7 @@
 
 - Team lead: [Ruslana Logosha](https://www.linkedin.com/in/ruslana-logosha-674b9241/)
 - Scrum Master: [Olga Levshukova](https://www.linkedin.com/in/olga-levshukova-62831343/)
-======================
+
 - Header: [Denys Onyshchuk](https://www.linkedin.com/in/onishchuk-denis)
 - About-us: [Daria Churkina](https://www.linkedin.com/in/daria-churkina-823a4b108/)
 - Services-and-prices: [Olga Levshukova](https://www.linkedin.com/in/olga-levshukova-62831343/)
