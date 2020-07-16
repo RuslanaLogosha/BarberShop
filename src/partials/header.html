@@ -4,6 +4,7 @@
       <svg class="logo-barbershop" aria-label="логотип барбешопа">
         <use href="./images/sprite.svg#logo-barbershop"></use>
       </svg>
+
       <button
         class="menu-mobile-toggle"
         type="button"
@@ -213,17 +214,18 @@
       </picture>
     </div>
 
-    <a class="prev" data-slider-next>Вперед</a>
-    <a class="next" data-slider-prev>Назад</a>
-    <!-- data-slider-prev -->
+    <div class="slider-nav">
+      <button class="prev" data-slider-prev>Назад</button>
+      <button class="next" data-slider-next>Вперед</button>
+    </div>
 
     <div class="slide-marks">
-      <span class="line" data-slider-line></span>
-      <span class="line" data-slider-line></span>
-      <span class="line" data-slider-line></span>
+      <button class="line" data-slider-line></button>
+      <button class="line" data-slider-line></button>
+      <button class="line" data-slider-line></button>
     </div>
   </div>
-  
+
   <button
     id="myBtn"
     data-button-top
