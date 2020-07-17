@@ -7,6 +7,17 @@ body {
     .logo-barbershop {
       color: $color-basic;
     }
+
+    .menu-mobile-container.is-open:before {
+      content: '';
+      position: fixed;
+      display: block;
+      top: 0px;
+      left: 0px;
+      height: 100px;
+      width: 100%;
+      background: $color-pale;
+    }
   }
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
     overflow: hidden;
