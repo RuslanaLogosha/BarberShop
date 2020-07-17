@@ -38,16 +38,18 @@ p {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media screen and (max-width: $viewport-breakpoint-2 - 1) {
     padding-left: 31px;
     padding-right: 31px;
   }
 
-  // @media screen and (min-width: $viewport-breakpoint-1) {
-  //   width: 480px;
-  // }
-
+  @media screen and (min-width: $viewport-breakpoint-1) {
+    width: 480px;
+  }
+  
   @media screen and (min-width: $viewport-breakpoint-2) {
     width: 768px;
     padding-left: 39px;
